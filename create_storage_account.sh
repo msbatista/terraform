@@ -1,10 +1,10 @@
 #!/bin/bash
 
-RESOURCE_GROUP_NAME=rg-msb-dev
-STORAGE_ACCOUNT_NAME=stomsbdev
+RESOURCE_GROUP_NAME=rg-msb-uat
+STORAGE_ACCOUNT_NAME=stomsbuat
 CONTAINER_NAME=terraform-state 
 
-# az group create --name $RESOURCE_GROUP_NAME --location eastus2
+az group create --name $RESOURCE_GROUP_NAME --location eastus2
 
 az storage account create --resource-group $RESOURCE_GROUP_NAME --name $STORAGE_ACCOUNT_NAME --sku Standard_LRS --encryption-services blob
 
